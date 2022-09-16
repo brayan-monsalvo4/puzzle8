@@ -10,7 +10,7 @@ class puzzle:
     def rellenar_puzzle (self, lista):
         self.matriz = list(lista)
 
-    def rellezar_puzzle_final(self, lista_final):
+    def rellenar_puzzle_final(self, lista_final):
         self.matriz_final = lista_final
 
     def get_element_at(self, numeroFila, numeroColumna) -> int:
