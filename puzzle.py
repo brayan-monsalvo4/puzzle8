@@ -4,10 +4,14 @@ class puzzle:
     def __init__(self):
         self.matriz = list()
         self.f_score = 0
+        self.matriz_final = list()
         pass
 
     def rellenar_puzzle (self, lista):
         self.matriz = list(lista)
+
+    def rellezar_puzzle_final(self, lista_final):
+        self.matriz_final = lista_final
 
     def get_element_at(self, numeroFila, numeroColumna) -> int:
         return self.matriz[numeroFila-1][numeroColumna-1]
@@ -17,6 +21,9 @@ class puzzle:
 
     def get_matriz (self) -> list:
         return copy.deepcopy(self.matriz)
+
+    def get_matriz_final (self) -> list:
+        return copy.deepcopy(self.matriz_final)
 
     def print_matriz (self):
         for fila in self.matriz:
