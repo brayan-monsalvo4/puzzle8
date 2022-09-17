@@ -28,6 +28,7 @@ class puzzle:
     def print_matriz (self):
         for fila in self.matriz:
             print(fila)
+        print()
 
     def find_zero (self) -> dict:
         ubicacion = dict()
@@ -109,7 +110,7 @@ class puzzle:
             print("error, funcion move right valores incorrectos")
             return 
 
-        if diccCoor["x"] == 1:
+        if diccCoor["y"] == 1:
             raise ValueError("no pueden moverse a la izquierda en la columna 1")
 
         x = diccCoor["x"]-1
