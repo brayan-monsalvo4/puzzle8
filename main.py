@@ -6,22 +6,22 @@ puzz = puzzle.puzzle()
 solv = solver.solver()
 
 
-m = [[1,2,3], 
-     [4,0,6], 
-     [7,5,8]]
+m = [[1, 2, 3], 
+     [0, 4, 6], 
+     [7, 5, 8]]
 
 final = [[1,2,3], 
-          [4,5,6], 
-          [7,8,0]]
+          [4, 5, 6], 
+          [7, 8, 0]]
 
 puzz.rellenar_puzzle(m)
+puzz.rellenar_puzzle_final(final)
 
 puzz.print_matriz()
 
-print( puzz.move_up( puzz.find_zero() ) )
+lis = solv.resolver(puzz)
 
-puzz.print_matriz()
-
-puzz.rellenar_puzzle( puzz.move_up( puzz.find_zero() ) )
-
-puzz.print_matriz()
+for resultado in lis:
+     for fila in resultado:
+          print(fila)
+     print()
